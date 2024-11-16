@@ -32,5 +32,8 @@ func Initialize()  {
 		})
 		server.GET("/products",ProductController.GetProducts)
 		server.POST("/product", ProductController.CreateProduct)
-	  server.Run(":8080") // listen and serve on 0.0.0.0:8080
+	  server.GET("/product/:productID", ProductController.GetProductById)
+		
+		
+		server.Run(":8080") // listen and serve on 0.0.0.0:8080
 }
